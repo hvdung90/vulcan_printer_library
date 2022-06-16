@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.jsecurity.printbot">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <supports-screens android:largeScreens="true" />
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <application
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:allowBackup="true"
+        android:theme="@style/AppTheme">
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <service
+            android:name="net.jsecurity.printbot.kitkat.PrintBotService"
+            android:label="@string/ServiceName"
+            android:permission="android.permission.BIND_PRINT_SERVICE">
+            <intent-filter>
+                <action android:name="android.printservice.PrintService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.printservice"
+                android:resource="@xml/printservice" />
+        </service>
+
+        <activity
+            android:name=".chooser.FileChooser"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:icon="@mipmap/ic_icon_app"
+            android:label="@string/AppName">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".prefs.PrinterListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:icon="@mipmap/ic_icon_app"
+            android:label="@string/AppName">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.PREFERENCE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".prefs.SettingsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:icon="@mipmap/ic_icon_app"
+            android:label="@string/SettingsTitle">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.PREFERENCE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".prefs.AdvancedActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/AdvancedSettingsTitle">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.PREFERENCE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ServiceDialog"
+            android:label="@string/ServiceSettings"
+            android:theme="@style/AboutTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.INFO" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="net.jsecurity.printbot.kitkat.ServiceConnector"
+            android:label="PrintVulcan"
+            android:theme="@style/AboutTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PrintActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/AppName"
+            android:theme="@style/AboutTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="net.jsecurity.printbot.action.PRINT" />
+                <action android:name="com.zenofx.action.PRINT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="net.jsecurity.printbot.action.PRINT" />
+                <action android:name="com.zenofx.action.PRINT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:mimeType="application/pdf" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="net.jsecurity.printbot.action.PRINT" />
+                <action android:name="com.zenofx.action.PRINT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:mimeType="text/html" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

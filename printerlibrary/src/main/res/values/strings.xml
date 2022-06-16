@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="AppName">Printer</string>
+    <string name="ServiceName" translatable="false">zenofx.com PrintBot</string>
+    <string name="About">About PrintBot</string>
+    <string name="Help">Help</string>
+    <string name="BuyPlay">PrintBot Pro at Google Play</string>
+    <string name="BuyAppStore">PrintBot Pro at Amazon AppStore</string>
+    <string name="ListMenuTitle">Static printers</string>
+    <string name="FileChooserTitle">Printer - %s</string>
+    <string name="NewPrinter">Add static printer</string>
+    <string name="EditPrinter">Edit</string>
+    <string name="DelPrinter">Delete printer</string>
+    <string name="Printer">Printer</string>
+    <string name="Resolution">Resolution</string>
+    <string name="PageSize">Page size</string>
+    <string name="Pages" translatable="false">Pages</string>
+    <string name="Width">Width %1$.1f cm/%2$.1f\"</string>
+    <string name="PrintButton">Print</string>
+    <string name="TestButton">Print test page</string>
+    <string name="ErrorTitle">Error</string>
+    <string name="SettingsTitle">Printer Settings</string>
+    <string name="Settings">Settings</string>
+    <string name="AdvancedSettingsTitle">Advanced Settings</string>
+    <string name="AdvancedSettings">Advanced Settings</string>
+    <string name="DisableWiFiCheck">Disable WiFi Check</string>
+    <string name="EnableAuthentication">Enable authentication (IPP and LPR)</string>
+    <string name="UseLegacyDrivers">Use legacy drivers</string>
+    <string name="PrintClipboard">Print clipboard</string>
+    <string name="Clipboard">Clipboard</string>
+    <string name="NetworkTitle">Network connection</string>
+    <string name="NetworkProtocol">Protocol</string>
+    <string name="NetworkScan">Scan</string>
+    <string name="NetworkPrinter">Printer</string>
+    <string name="NetworkHost">Host (IP address or hostname)</string>
+    <string name="NetworkQueue">Printer queue</string>
+    <string name="NetworkUser">User (optional)</string>
+    <string name="NetworkPassword">Password (optional)</string>
+    <string name="PrinterTitle">Printer</string>
+    <string name="PrinterManufacturer">Manufacturer</string>
+    <string name="PrinterModel">Printer model</string>
+    <string name="DefaultResolution">Default resolution</string>
+    <string name="DefaultPageSize">Default page size</string>
+    <string name="PrintTestPage">Printing test page…</string>
+    <string name="PrintPage">Printing %s…</string>
+    <string name="ProtocolBonjour">Auto</string>
+    <string name="ProtocolLPD">LPR</string>
+    <string name="ProtocolCIFS">Windows share (CIFS)</string>
+    <string name="ProtocolRAW">Raw (JetDirect)</string>
+    <string name="ProtocolIPP">IPP</string>
+    <string name="ProtocolFritz" translatable="false">Fritz!Box</string>
+    <string name="ErrorPrintServer">Error while connecting to your print server: %s</string>
+    <string name="ErrorRendering">Error while rendering: %s</string>
+    <string name="ErrorPrinting">Error while printing: %s</string>
+    <string name="ErrorScanning" translatable="false">Error while searching for printer %s</string>
+    <string name="ErrorReading">Error reading %s.</string>
+    <string name="ErrorUnknownType">File type not supported by Printer.</string>
+    <string name="ErrorInfo">Error getting printer info.</string>
+    <string name="ErrorMediaNotMounted">SD card is not mounted.</string>
+    <string name="ErrorUnknown">Unknown error.</string>
+    <string name="ErrorConnecting">Error connection to Printer server.</string>
+    <string name="ErrorFileTooLarge">File too large for free version.</string>
+    <string name="ErrorTooManyPrints">Number of prints in free version exceeded.</string>
+    <string name="ErrorTooManyPrinters">Only one printer allowed in free version.</string>
+    <string name="ErrorTooManyPages" translatable="false">The free version allows only 3 pages.</string>
+    <string name="ErrorWrongVersion">Your Printer version is no longer supported. Please update.</string>
+    <string name="ErrorNoDriver">No printer driver selected. Please set up your printer.</string>
+    <string name="ErrorDriverNameChanged">Name of printer driver has changed. Please set up your printer again.</string>
+    <string name="ErrorDeviceNotSupported">Your Android device is not supported by Printer.</string>
+    <string name="ErrorWrongProVersion">This version of Printer Pro is no longer supported. Please use the Android Market to update Printer Pro.</string>
+    <string name="ErrorNoWIFI">Please enable WiFi for Printer to work. If you want to use Printer without WiFi, please use Settings/Advanced/Disable WiFi check.</string>
+    <string name="ErrorIPV6">Invalid IP address.</string>
+    <string name="ErrorPrinterOffline">Printer offline.</string>
+    <string name="ErrorResolving" translatable="false">Error resolving printer address: %s</string>
+    <string name="ErrorIPPPrinterOffline">IPP printer offline.</string>
+    <string name="ErrorPrintCanceled">Printing canceled.</string>
+    <string name="ErrorScanCanceled">Scanning canceled.</string>
+    <string name="ErrorLicense">Couldn\'t check Printer Pro license, probably no connection to Google Play. Please try again later.</string>
+    <string name="ErrorNoTestPage">No test page available in raw mode</string>
+    <string name="ErrorPlay" translatable="false">Error connecting to Google Play.</string>
+    <string name="ErrorAmazon" translatable="false">Error connecting to Amazon appstore.</string>
+    <string name="ErrorAmazonUser" translatable="false">User not logged in to Amazon appstore.</string>
+    <string name="ErrorAmazonAlreadyOwned" translatable="false">Printer Pro already owned, restoring license.</string>
+    <string name="ErrorConvertPDF" translatable="false">Could not open PDF file, probably password protected.</string>
+    <string name="ErrorParsingPages" translatable="false">Illegal value for page restriction.</string>
+    <string name="WarnFileTypeNotSupported">File type not supported for %s .</string>
+    <string name="WarnClipboardEmpty">Clipboard empty.</string>
+    <string name="WarnServiceStart" translatable="false">New version of Printer installed. Please enable or restart zenofx.com Printer on service settings page.</string>
+    <string name="WarnPlay" translatable="false">Already bought the Pro version.</string>
+    <string name="WarnWatermark" translatable="false">Only 3 prints per month in free version, printing with watermark…</string>
+    <string name="InfoSuccess" translatable="false">Successfully printed %s.</string>
+    <string name="FeedbackText">Feedback: %s</string>
+    <string name="MarketTitle" translatable="false">Buy Printer Pro</string>
+    <string name="MarketText">Unlimited printing with Printer Pro:</string>
+    <string name="InfoScanning">Scanning for printers…</string>
+    <string name="HtmlPrintTitle">Print HTML</string>
+    <string name="HtmlPrintMessage">You\'re trying to print a URL. HTML printing only works for static web pages. This won\'t work for dynamic pages or for pages where a login is required. Printing images is only supported in Pro version.</string>
+    <string name="HtmlPrintMessagePro">You\'re trying to print a URL. HTML printing only works for static web pages. This won\'t work for dynamic pages or for pages where a login is required.</string>
+    <string name="HtmlPrintPage">Print HTML</string>
+    <string name="HtmlPrintURL">Print URL</string>
+    <string name="LicenseText" translatable="false">Please wait…</string>
+    <string name="ServiceSettings" translatable="false">Service settings</string>
+    <string name="label_not_selected" translatable="false">label_not_selected</string>
+    <string name="button_print" translatable="false">button_print</string>
+    <string name="select_print_driver" translatable="false">select_print_driver</string>
+    <string name="status_hint" translatable="false">status_hint</string>
+    <string name="select_print_example" translatable="false">select_print_example</string>
+    <string name="preview_receipt" translatable="false">preview_receipt</string>
+    <string name="print_receipt" translatable="false">print_receipt</string>
+    <string name="print_open_drawer" translatable="false">print_open_drawer</string>
+    <string name="printing_with_code_page" translatable="false">printing_with_code_page</string>
+    <string name="preview_code_page_example" translatable="false">preview_code_page_example</string>
+    <string name="print_code_page_example" translatable="false">print_code_page_example</string>
+
+</resources>

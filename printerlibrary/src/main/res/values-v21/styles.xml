@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AboutTheme" parent="@android:style/Theme.Material.Light.Dialog.MinWidth">
+    </style>
+    <style name="AppTheme" parent="@android:style/Theme.Material">
+        <item name="android:navigationBarColor">?android:attr/colorPrimary</item>
+    </style>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:scrollbars="vertical" android:fillViewport="true">
+    <TableLayout android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:stretchColumns="0">
+        <TableRow>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_span="2" android:text="@string/NetworkProtocol"/>
+        </TableRow>
+        <TableRow>
+            <Spinner android:id="@+id/ProtocolSpinner" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:id="@+id/HostLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/NetworkHost" android:labelFor="@+id/HostText"/>
+        </TableRow>
+        <TableRow>
+            <EditText android:id="@+id/HostText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_span="2" android:inputType="textNoSuggestions"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:id="@+id/QueueLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_span="2" android:text="@string/NetworkQueue" android:labelFor="@+id/QueueText"/>
+        </TableRow>
+        <TableRow>
+            <EditText android:id="@+id/QueueText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_span="2" android:inputType="textNoSuggestions"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:id="@+id/UserLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_span="2" android:text="@string/NetworkUser" android:labelFor="@+id/UserText"/>
+        </TableRow>
+        <TableRow>
+            <EditText android:id="@+id/UserText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_span="2" android:inputType="textNoSuggestions"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:id="@+id/PasswordLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_span="2" android:text="@string/NetworkPassword" android:labelFor="@+id/PasswordText"/>
+        </TableRow>
+        <TableRow>
+            <EditText android:id="@+id/PasswordText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_span="2" android:inputType="textPassword"/>
+        </TableRow>
+    </TableLayout>
+</ScrollView>
