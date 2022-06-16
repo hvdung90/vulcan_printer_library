@@ -19,7 +19,7 @@ android {
         exclude("META-INF/*.kotlin_module")
     }
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 19
         targetSdkVersion 30
     }
 
