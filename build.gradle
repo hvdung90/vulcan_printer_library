@@ -16,19 +16,14 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven { url 'https://jitpack.io' }
-        mavenCentral()
-//        maven {
-//            name = "AEVI-UK"
-//            url = uri("https://maven.pkg.github.com/aevi-uk/*")
-//            credentials {
-//                username = "hvdung90"
-//                password = "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"
-//            }
-//        }
         maven {
-            url "http://dl.bintray.com/aevi/aevi-uk"
+            url 'https://jitpack.io'
+            credentials {
+                username = "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"
+            }
         }
+        mavenCentral()
+
     }
 }
 
