@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:key="settingsScreen">
-    <net.jsecurity.printbot.prefs.ConnectionPreference android:title="@string/NetworkTitle" android:key="connection" android:dialogTitle="@string/NetworkTitle" android:dialogLayout="@layout/connection"/>
-    <net.jsecurity.printbot.prefs.PrinterPreference android:title="@string/PrinterTitle" android:key="printer" android:dialogTitle="@string/PrinterTitle" android:dialogLayout="@layout/printer"/>
-    <ListPreference android:title="@string/DefaultResolution" android:key="resolution"/>
-    <Preference android:title="@string/TestButton" android:key="testButton"/>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="settingsScreen">
+
+    <net.jsecurity.printbot.prefs.ConnectionPreference
+        android:dialogLayout="@layout/connection"
+        android:dialogTitle="@string/NetworkTitle"
+        android:key="connection"
+        android:title="@string/NetworkTitle" />
+
+    <net.jsecurity.printbot.prefs.PrinterPreference
+        android:dialogLayout="@layout/printer"
+        android:dialogTitle="@string/PrinterTitle"
+        android:key="printer"
+        android:title="@string/PrinterTitle" />
+
+    <ListPreference
+        android:key="resolution"
+        android:title="@string/DefaultResolution" />
+
+    <Preference
+        android:key="testButton"
+        android:title="@string/TestButton" />
 </PreferenceScreen>

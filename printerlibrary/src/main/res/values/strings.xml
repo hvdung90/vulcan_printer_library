@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="AppName">Printer</string>
-    <string name="ServiceName" translatable="false">zenofx.com PrintBot</string>
+    <string name="AppName">Vulcanlabs Printer</string>
+    <string name="ServiceName" translatable="false">Vulcanlabs Print Service</string>
     <string name="About">About PrintBot</string>
     <string name="Help">Help</string>
     <string name="BuyPlay">PrintBot Pro at Google Play</string>
