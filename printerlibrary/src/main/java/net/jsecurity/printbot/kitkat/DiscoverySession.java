@@ -215,12 +215,10 @@ public class DiscoverySession extends PrinterDiscoverySession {
             if (item.getName().equals(name)) {
                 if (remote) {
                     data.remove(i);
+                    this.printService.getSharedPreferences(GUIConstants.PREFERENCE_KEY, Context.MODE_PRIVATE).edit().putString(JOB_NAME, new Gson().toJson(data));
                 }
                 return;
             }
-        }
-        if (remote) {
-            return;
         }
         Printer print = new Printer(new Random().nextInt(100) + "", name, ip);
         data.add(print);
