@@ -55,7 +55,7 @@ public class PrintBotService extends PrintService implements ServiceConnection {
 
     public void onDestroy() {
         Log.i("PrintVulcan", "Destroying PrintBotService");
-        unbindService(this);
+//        unbindService(this);
     }
 
     public PrinterDiscoverySession onCreatePrinterDiscoverySession() {
