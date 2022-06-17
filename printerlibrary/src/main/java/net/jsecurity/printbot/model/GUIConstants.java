@@ -34,8 +34,8 @@ public class GUIConstants {
     public static final String PAGE_SIZE_LETTER = "letter";
     public static final String PASSWORD = "password";
     public static final String PLAY_URL = "market://search?q=pname:net.jsecurity.printbot.pro";
-    public static final String PREFERENCE_KEY = "com.vulcanlabs";
-    public static final String PREFERENCE_KEY_PREFIX = "net.jsecurity.printbot.";
+    public static final String PREFERENCE_KEY = "universal_printer_pref";
+    public static final String PREFERENCE_KEY_PREFIX = "universal_printer_pref.";
     public static final String PRINTER_INDEX = "PrinterIndex";
     public static final String PROTOCOL = "protocol";
     public static final String PROTOCOL_BONJOUR = "zeroconf";

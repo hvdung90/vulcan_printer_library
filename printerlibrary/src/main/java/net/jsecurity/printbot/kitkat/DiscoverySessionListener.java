@@ -24,7 +24,7 @@ class DiscoverySessionListener implements NsdManager.DiscoveryListener {
 
     public void onServiceFound(NsdServiceInfo serviceInfo) {
         Log.i("PrintVulcan", "Found printer " + serviceInfo);
-        this.session.addPrinter(serviceInfo.getServiceName(), this.type);
+        this.session.addPrinter(serviceInfo.getServiceName(), this.type,serviceInfo.getHost());
     }
 
     public void onServiceLost(NsdServiceInfo serviceInfo) {

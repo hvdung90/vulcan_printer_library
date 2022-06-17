@@ -27,7 +27,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PrintBotService extends PrintService implements ServiceConnection {
-    static final String JOB_ID_EXTRA = "net.jsecurity.printbot.kitkat.jobId";
     private static final Map<PrintJobId, PrintTask> tasks = new HashMap();
 
     public void onServiceDisconnected(ComponentName name) {
@@ -38,19 +37,19 @@ public class PrintBotService extends PrintService implements ServiceConnection {
 
     public void onCreate() {
         Log.i("PrintVulcan", "Creating PrintBotService");
-        String installerPackageName = getPackageManager().getInstallerPackageName(getPackageName());
-        int pv = getSharedPreferences(GUIConstants.PREFERENCE_KEY, 0).getInt("PV", 0);
-        if (SettingsHelper.getProVersion(this) > pv) {
-            Intent serviceConnector = new Intent(this, ServiceConnector.class);
-            serviceConnector.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(serviceConnector);
-        } else if (pv == 0) {
-            if (installerPackageName == null || !installerPackageName.startsWith("com.amazon")) {
-                Intent intent = new Intent("com.android.vending.billing.InAppBillingService.BIND");
-                intent.setPackage("com.android.vending");
-                bindService(intent, this, Context.BIND_AUTO_CREATE);
-            }
-        }
+ //       String installerPackageName = getPackageManager().getInstallerPackageName(getPackageName());
+ //       int pv = getSharedPreferences(GUIConstants.PREFERENCE_KEY, 0).getInt("PV", 0);
+//        if (SettingsHelper.getProVersion(this) > pv) {
+//            Intent serviceConnector = new Intent(this, ServiceConnector.class);
+//            serviceConnector.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//            startActivity(serviceConnector);
+//        } else if (pv == 0) {
+//            if (installerPackageName == null || !installerPackageName.startsWith("com.amazon")) {
+//                Intent intent = new Intent("com.android.vending.billing.InAppBillingService.BIND");
+//                intent.setPackage("com.android.vending");
+//                bindService(intent, this, Context.BIND_AUTO_CREATE);
+//            }
+//        }
         tasks.clear();
     }
 

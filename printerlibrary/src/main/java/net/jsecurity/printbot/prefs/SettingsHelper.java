@@ -120,7 +120,7 @@ public class SettingsHelper {
         SharedPreferences pref = ctx.getSharedPreferences(GUIConstants.PREFERENCE_KEY_PREFIX + ix, 0);
         while (true) {
             ix++;
-            SharedPreferences nextPref = ctx.getSharedPreferences(GUIConstants.PREFERENCE_KEY_PREFIX + ix, 0);
+            SharedPreferences nextPref = ctx.getSharedPreferences(GUIConstants.PREFERENCE_KEY_PREFIX + ix, Context.MODE_PRIVATE);
             if (nextPref.contains(GUIConstants.PROTOCOL) || pref.contains(GUIConstants.DRIVER)) {
                 Map<String, ?> allPrefs = nextPref.getAll();
                 SharedPreferences.Editor editor = pref.edit();
