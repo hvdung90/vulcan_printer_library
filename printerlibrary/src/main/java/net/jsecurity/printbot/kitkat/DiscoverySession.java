@@ -16,18 +16,17 @@ import android.util.Log;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import java.net.Inet6Address;
-import java.net.InetAddress;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
-
 import net.jsecurity.printbot.model.GUIConstants;
 import net.jsecurity.printbot.model.KeyValuePair;
 import net.jsecurity.printbot.model.PrintBotInfo;
 import net.jsecurity.printbot.model.Printer;
 import net.jsecurity.printbot.prefs.SettingsHelper;
+
+import java.net.InetAddress;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 
 public class DiscoverySession extends PrinterDiscoverySession {
     private static final PrintAttributes.Margins DEFAULT_MARGINS = new PrintAttributes.Margins(10, 10, 10, 10);
@@ -95,19 +94,19 @@ public class DiscoverySession extends PrinterDiscoverySession {
         } else if (networkUrl.startsWith(GUIConstants.PROTOCOL_BONJOUR)) {
             new ProposalTask(this.printService, this, id, networkUrl.substring(GUIConstants.PROTOCOL_BONJOUR.length() + 1)).execute(new Void[0]);
         }
-        String json = this.printService.getSharedPreferences(GUIConstants.PREFERENCE_KEY, Context.MODE_PRIVATE).getString("printers", "");
-        List<Printer> data = new Gson().fromJson(json, new TypeToken<List<Printer>>() {
-        }.getType());
-        if (data == null)
-            data = new ArrayList<>();
-        for (Printer item : data) {
-            if (item.getName().equals(info.getNetworkName())) ;
-            return;
-        }
-
-        Printer print = new Printer(info.getIndex() + "", info.getNetworkName(), info.getHost());
-        data.add(print);
-        this.printService.getSharedPreferences(GUIConstants.PREFERENCE_KEY, Context.MODE_PRIVATE).edit().putString(JOB_NAME, new Gson().toJson(data));
+//        String json = this.printService.getSharedPreferences(GUIConstants.PREFERENCE_KEY, Context.MODE_PRIVATE).getString("printers", "");
+//        List<Printer> data = new Gson().fromJson(json, new TypeToken<List<Printer>>() {
+//        }.getType());
+//        if (data == null)
+//            data = new ArrayList<>();
+//        for (Printer item : data) {
+//            if (item.getName().equals(info.getNetworkName())) ;
+//            return;
+//        }
+//
+//        Printer print = new Printer(info.getIndex() + "", info.getNetworkName(), info.getHost());
+//        data.add(print);
+//        this.printService.getSharedPreferences(GUIConstants.PREFERENCE_KEY, Context.MODE_PRIVATE).edit().putString(JOB_NAME, new Gson().toJson(data));
 
     }
 
